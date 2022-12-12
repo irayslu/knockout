@@ -1,4 +1,4 @@
-
+import ko from './namespace';
 ko.utils.domData = new (function () {
     var uniqueId = 0;
     var dataStoreKeyExpandoPropertyName = "__ko__" + (new Date).getTime();

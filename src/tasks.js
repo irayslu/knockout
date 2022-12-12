@@ -1,3 +1,4 @@
+import ko from './namespace';
 ko.tasks = (function () {
     var scheduler,
         taskQueue = [],

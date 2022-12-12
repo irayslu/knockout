@@ -1,3 +1,4 @@
+import ko from '../namespace';
 ko.expressionRewriting = (function () {
     var javaScriptReservedWords = ["true", "false", "null", "undefined"];
 

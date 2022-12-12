@@ -1,3 +1,4 @@
+import ko from '../namespace';
 (function(undefined) {
 
     // The default loader is responsible for two things:

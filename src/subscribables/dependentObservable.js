@@ -1,3 +1,4 @@
+import ko from '../namespace';
 var computedState = ko.utils.createSymbolOrString('_state');
 
 ko.computed = ko.dependentObservable = function (evaluatorFunctionOrOptions, evaluatorFunctionTarget, options) {

@@ -1,4 +1,4 @@
-
+import ko from '../namespace';
 (function() {
     var maxNestedObservableDepth = 10; // Escape the (unlikely) pathological case where an observable's current value is itself (or similar reference cycle)
 

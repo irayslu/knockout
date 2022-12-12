@@ -1,3 +1,5 @@
+import ko from './namespace';
+
 ko.utils = (function () {
     var hasOwnProperty = Object.prototype.hasOwnProperty;
 

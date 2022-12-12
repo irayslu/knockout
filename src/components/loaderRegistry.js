@@ -1,3 +1,4 @@
+import ko from '../namespace';
 (function(undefined) {
     var loadingSubscribablesCache = {}, // Tracks component loads that are currently in flight
         loadedDefinitionsCache = {};    // Tracks component loads that have already completed

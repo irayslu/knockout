@@ -1,0 +1,62 @@
+import ko from './namespace.js';
+import './google-closure-compiler-utils.js';
+import './version.js';
+import './options.js';
+import './utils.js';
+import './utils.domData.js';
+import './utils.domNodeDisposal.js';
+import './utils.domManipulation.js';
+import './memoization.js';
+import './tasks.js';
+import './subscribables/extenders.js';
+import './subscribables/subscribable.js';
+import './subscribables/dependencyDetection.js';
+import './subscribables/observable.js';
+import './subscribables/observableArray.js';
+import './subscribables/observableArray.changeTracking.js';
+import './subscribables/dependentObservable.js';
+import './subscribables/mappingHelpers.js';
+import './subscribables/observableUtils.js';
+import './binding/selectExtensions.js';
+import './binding/expressionRewriting.js';
+import './virtualElements.js';
+import './binding/bindingProvider.js';
+import './binding/bindingAttributeSyntax.js';
+import './components/loaderRegistry.js';
+import './components/defaultLoader.js';
+import './components/customElements.js';
+import './components/componentBinding.js';
+import './binding/defaultBindings/attr.js';
+import './binding/defaultBindings/checked.js';
+import './binding/defaultBindings/css.js';
+import './binding/defaultBindings/enableDisable.js';
+import './binding/defaultBindings/event.js';
+import './binding/defaultBindings/foreach.js';
+import './binding/defaultBindings/hasfocus.js';
+import './binding/defaultBindings/html.js';
+import './binding/defaultBindings/ifIfnotWith.js';
+import './binding/defaultBindings/let.js';
+import './binding/defaultBindings/options.js';
+import './binding/defaultBindings/selectedOptions.js';
+import './binding/defaultBindings/style.js';
+import './binding/defaultBindings/submit.js';
+import './binding/defaultBindings/text.js';
+import './binding/defaultBindings/textInput.js';
+import './binding/defaultBindings/uniqueName.js';
+import './binding/defaultBindings/using.js';
+import './binding/defaultBindings/value.js';
+import './binding/defaultBindings/visibleHidden.js';
+import './binding/defaultBindings/click.js';
+import './templating/templateEngine.js';
+import './templating/templateRewriting.js';
+import './templating/templateSources.js';
+import './templating/templating.js';
+import './binding/editDetection/compareArrays.js';
+import './binding/editDetection/arrayToDomNodeChildren.js';
+import './templating/native/nativeTemplateEngine.js';
+import './templating/jquery.tmpl/jqueryTmplTemplateEngine.js'
+
+
+
+
+export default ko;

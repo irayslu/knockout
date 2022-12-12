@@ -1,3 +1,4 @@
+import ko from '../namespace';
 (function () {
     var hasDomDataExpandoProperty = '__ko__hasDomDataOptionValue__';
 

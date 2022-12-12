@@ -1,3 +1,4 @@
+import ko from '../namespace';
 (function (undefined) {
     // Overridable API for determining which component name applies to a given node. By overriding this,
     // you can for example map specific tagNames to components that are not preregistered.

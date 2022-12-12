@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 ko.bindingHandlers['value'] = {
     'init': function (element, valueAccessor, allBindings) {
         var tagName = ko.utils.tagNameLower(element),

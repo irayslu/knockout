@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 ko.bindingHandlers['selectedOptions'] = {
     'init': function (element, valueAccessor, allBindings) {
         function updateFromView() {

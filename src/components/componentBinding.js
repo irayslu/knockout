@@ -1,3 +1,4 @@
+import ko from '../namespace';
 (function(undefined) {
     var componentLoadingOperationUniqueId = 0;
 

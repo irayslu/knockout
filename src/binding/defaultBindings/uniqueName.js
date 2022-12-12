@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 ko.bindingHandlers['uniqueName'] = {
     'init': function (element, valueAccessor) {
         if (valueAccessor()) {

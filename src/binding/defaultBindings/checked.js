@@ -1,3 +1,5 @@
+import ko from '../../namespace';
+
 (function() {
 
 ko.bindingHandlers['checked'] = {

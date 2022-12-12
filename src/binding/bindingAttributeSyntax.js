@@ -1,3 +1,4 @@
+import ko from '../namespace';
 (function () {
     // Hide or don't minify context properties, see https://github.com/knockout/knockout/issues/2294
     var contextSubscribable = ko.utils.createSymbolOrString('_subscribable');

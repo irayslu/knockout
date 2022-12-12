@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 (function () {
 
 // Makes a binding like with or if

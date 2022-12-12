@@ -1,3 +1,4 @@
+import ko from '../namespace';
 
 ko.subscription = function (target, callback, disposeCallback) {
     this._target = target;

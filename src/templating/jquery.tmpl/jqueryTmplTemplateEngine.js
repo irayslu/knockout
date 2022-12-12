@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 (function() {
     ko.jqueryTmplTemplateEngine = function () {
         // Detect which version of jquery-tmpl you're using. Unfortunately jquery-tmpl

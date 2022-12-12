@@ -1,3 +1,4 @@
+import ko from '../namespace';
 (function () {
     var _templateEngine;
     ko.setTemplateEngine = function (templateEngine) {

@@ -1,3 +1,4 @@
+import ko from '../namespace';
 var arrayChangeEventName = 'arrayChange';
 ko.extenders['trackArrayChanges'] = function(target, options) {
     // Use the provided options--each call to trackArrayChanges overwrites the previously set options

@@ -1,3 +1,4 @@
+import ko from '../namespace';
 ko.when = function(predicate, callback, context) {
     function kowhen (resolve) {
         var observable = ko.pureComputed(predicate, context).extend({notify:'always'});

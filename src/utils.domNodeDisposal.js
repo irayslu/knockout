@@ -1,3 +1,4 @@
+import ko from './namespace';
 
 ko.utils.domNodeDisposal = new (function () {
     var domDataKey = ko.utils.domData.nextKey();

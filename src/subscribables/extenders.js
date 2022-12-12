@@ -1,3 +1,4 @@
+import ko from '../namespace';
 ko.extenders = {
     'throttle': function(target, timeout) {
         // Throttling means two things:

@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 (function () {
 
 if (window && window.navigator) {

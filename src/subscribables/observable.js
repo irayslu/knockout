@@ -1,3 +1,5 @@
+import ko from '../namespace';
+
 var observableLatestValue = ko.utils.createSymbolOrString('_latestValue');
 
 ko.observable = function (initialValue) {

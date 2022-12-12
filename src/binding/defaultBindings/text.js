@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 ko.bindingHandlers['text'] = {
     'init': function() {
         // Prevent binding on the dynamically-injected text node (as developers are unlikely to expect that, and it has security implications).

@@ -1,3 +1,5 @@
+import ko from '../namespace';
+
 (function() {
     var defaultBindingAttributeName = "data-bind";
 

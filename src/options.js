@@ -1,3 +1,4 @@
+import ko from './namespace';
 // For any options that may affect various areas of Knockout and aren't directly associated with data binding.
 ko.options = {
     'deferUpdates': false,

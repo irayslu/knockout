@@ -1,3 +1,4 @@
+import ko from '../namespace';
 // If you want to make a custom template engine,
 //
 // [1] Inherit from this class (like ko.nativeTemplateEngine does)

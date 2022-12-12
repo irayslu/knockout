@@ -1,3 +1,4 @@
+import ko from '../namespace';
 ko.observableArray = function (initialValues) {
     initialValues = initialValues || [];
 

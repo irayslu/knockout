@@ -1,3 +1,5 @@
+import ko from './namespace'
+
 // Google Closure Compiler helpers (used only to make the minified file smaller)
 ko.exportSymbol = function(koPath, object) {
     var tokens = koPath.split(".");

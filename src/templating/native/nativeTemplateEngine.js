@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 ko.nativeTemplateEngine = function () {
     this['allowTemplateRewriting'] = false;
 }

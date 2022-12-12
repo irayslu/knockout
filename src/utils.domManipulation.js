@@ -1,3 +1,5 @@
+import ko from './namespace';
+
 (function () {
     var none = [0, "", ""],
         table = [1, "<table>", "</table>"],

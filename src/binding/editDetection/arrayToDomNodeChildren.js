@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 (function () {
     // Objective:
     // * Given an input array, a container DOM node, and a function from array elements to arrays of DOM nodes,

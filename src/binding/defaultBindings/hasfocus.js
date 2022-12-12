@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 var hasfocusUpdatingProperty = '__ko_hasfocusUpdating';
 var hasfocusLastValue = '__ko_hasfocusLastValue';
 ko.bindingHandlers['hasfocus'] = {

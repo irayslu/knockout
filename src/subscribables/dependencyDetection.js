@@ -1,4 +1,4 @@
-
+import ko from '../namespace';
 ko.computedContext = ko.dependencyDetection = (function () {
     var outerFrames = [],
         currentFrame,

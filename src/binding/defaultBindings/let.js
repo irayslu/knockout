@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 ko.bindingHandlers['let'] = {
     'init': function(element, valueAccessor, allBindings, viewModel, bindingContext) {
         // Make a modified binding context, with extra properties, and apply it to descendant elements

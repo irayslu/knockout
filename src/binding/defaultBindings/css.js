@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 var classesWrittenByBindingKey = '__ko__cssValue';
 ko.bindingHandlers['class'] = {
     'update': function (element, valueAccessor) {

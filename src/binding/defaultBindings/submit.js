@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 ko.bindingHandlers['submit'] = {
     'init': function (element, valueAccessor, allBindings, viewModel, bindingContext) {
         if (typeof valueAccessor() != "function")

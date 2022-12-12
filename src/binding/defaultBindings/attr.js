@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 var attrHtmlToJavaScriptMap = { 'class': 'className', 'for': 'htmlFor' };
 ko.bindingHandlers['attr'] = {
     'update': function(element, valueAccessor, allBindings) {

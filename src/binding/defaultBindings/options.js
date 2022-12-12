@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 var captionPlaceholder = {};
 ko.bindingHandlers['options'] = {
     'init': function(element) {

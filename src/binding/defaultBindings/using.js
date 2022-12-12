@@ -1,3 +1,4 @@
+import ko from '../../namespace';
 ko.bindingHandlers['using'] = {
     'init': function(element, valueAccessor, allBindings, viewModel, bindingContext) {
         var options;

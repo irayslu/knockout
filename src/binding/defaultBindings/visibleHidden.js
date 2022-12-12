@@ -1,3 +1,5 @@
+import ko from '../../namespace';
+
 ko.bindingHandlers['visible'] = {
     'update': function (element, valueAccessor) {
         var value = ko.utils.unwrapObservable(valueAccessor());

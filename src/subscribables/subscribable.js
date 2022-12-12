@@ -1,4 +1,5 @@
 import ko from '../namespace';
+import { applyExtenders } from './extenders';
 
 ko.subscription = function (target, callback, disposeCallback) {
     this._target = target;

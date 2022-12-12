@@ -61,7 +61,7 @@ ko.bindingHandlers['textInput'] = {
             var elementValue = element.value;
             if (previousElementValue !== elementValue) {
                 // Provide a way for tests to know exactly which event was processed
-                if (DEBUG && event) element['_ko_textInputProcessedEvent'] = event.type;
+                if (ko.DEBUG && event) element['_ko_textInputProcessedEvent'] = event.type;
                 previousElementValue = elementValue;
                 ko.expressionRewriting.writeValueToProperty(valueAccessor(), allBindings, 'textInput', elementValue);
             }
@@ -74,7 +74,7 @@ ko.bindingHandlers['textInput'] = {
                 // updates that are from the previous state of the element, usually due to techniques
                 // such as rateLimit. Such updates, if not ignored, can cause keystrokes to be lost.
                 elementValueBeforeEvent = element.value;
-                var handler = DEBUG ? updateModel.bind(element, {type: event.type}) : updateModel;
+                var handler = ko.DEBUG ? updateModel.bind(element, {type: event.type}) : updateModel;
                 timeoutHandle = ko.utils.setTimeout(handler, 4);
             }
         };
@@ -110,7 +110,7 @@ ko.bindingHandlers['textInput'] = {
             ko.utils.registerEventHandler(element, event, handler);
         };
 
-        if (DEBUG && ko.bindingHandlers['textInput']['_forceUpdateOn']) {
+        if (ko.DEBUG && ko.bindingHandlers['textInput']['_forceUpdateOn']) {
             // Provide a way for tests to specify exactly which events are bound
             ko.utils.arrayForEach(ko.bindingHandlers['textInput']['_forceUpdateOn'], function(eventName) {
                 if (eventName.slice(0,5) == 'after') {

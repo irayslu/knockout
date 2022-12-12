@@ -1,4 +1,5 @@
 import ko from './namespace';
+import $ from 'jquery';
 
 ko.utils = (function () {
     var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -28,7 +29,7 @@ ko.utils = (function () {
     }
 
     var canSetPrototype = ({ __proto__: [] } instanceof Array);
-    var canUseSymbols = !DEBUG && typeof Symbol === 'function';
+    var canUseSymbols = !ko.DEBUG && typeof Symbol === 'function';
 
     // Represent the known event types in a compact way, then at runtime transform it into a hash with event name as key (for fast lookup)
     var knownEvents = {}, knownEventTypesByEventName = {};
@@ -381,11 +382,11 @@ ko.utils = (function () {
             var wrappedHandler = ko.utils.catchFunctionErrors(handler);
 
             var mustUseAttachEvent = eventsThatMustBeRegisteredUsingAttachEvent[eventType];
-            if (!ko.options['useOnlyNativeEvents'] && !mustUseAttachEvent && jQueryInstance) {
+            if (!ko.options['useOnlyNativeEvents'] && !mustUseAttachEvent && $) {
                 if (!jQueryEventAttachName) {
-                    jQueryEventAttachName = (typeof jQueryInstance(element)['on'] == 'function') ? 'on' : 'bind';
+                    jQueryEventAttachName = (typeof $(element)['on'] == 'function') ? 'on' : 'bind';
                 }
-                jQueryInstance(element)[jQueryEventAttachName](eventType, wrappedHandler);
+                $(element)[jQueryEventAttachName](eventType, wrappedHandler);
             } else if (!mustUseAttachEvent && typeof element.addEventListener == "function")
                 element.addEventListener(eventType, wrappedHandler, false);
             else if (typeof element.attachEvent != "undefined") {
@@ -411,8 +412,8 @@ ko.utils = (function () {
             // In both cases, we'll use the click method instead.
             var useClickWorkaround = isClickOnCheckableElement(element, eventType);
 
-            if (!ko.options['useOnlyNativeEvents'] && jQueryInstance && !useClickWorkaround) {
-                jQueryInstance(element)['trigger'](eventType);
+            if (!ko.options['useOnlyNativeEvents'] && $ && !useClickWorkaround) {
+                $(element)['trigger'](eventType);
             } else if (typeof document.createEvent == "function") {
                 if (typeof element.dispatchEvent == "function") {
                     var eventCategory = knownEventTypesByEventName[eventType] || "HTMLEvents";

@@ -1,4 +1,6 @@
 import ko from '../namespace';
+import { valuesArePrimitiveAndEqual } from './extenders';
+
 var computedState = ko.utils.createSymbolOrString('_state');
 
 ko.computed = ko.dependentObservable = function (evaluatorFunctionOrOptions, evaluatorFunctionTarget, options) {
@@ -81,7 +83,7 @@ ko.computed = ko.dependentObservable = function (evaluatorFunctionOrOptions, eva
         ko.extenders['deferred'](computedObservable, true);
     }
 
-    if (DEBUG) {
+    if (ko.DEBUG) {
         // #1731 - Aid debugging by exposing the computed's options
         computedObservable["_options"] = options;
     }
@@ -323,7 +325,7 @@ var computedFn = {
             }
 
             state.latestValue = newValue;
-            if (DEBUG) computedObservable._latestValue = newValue;
+            if (ko.DEBUG) computedObservable._latestValue = newValue;
 
             computedObservable["notifySubscribers"](state.latestValue, "spectate");
 

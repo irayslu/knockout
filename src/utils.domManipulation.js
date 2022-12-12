@@ -1,4 +1,5 @@
 import ko from './namespace';
+import $ from 'jquery';
 
 (function () {
     var none = [0, "", ""],
@@ -73,11 +74,11 @@ import ko from './namespace';
 
     function jQueryHtmlParse(html, documentContext) {
         // jQuery's "parseHTML" function was introduced in jQuery 1.8.0 and is a documented public API.
-        if (jQueryInstance['parseHTML']) {
-            return jQueryInstance['parseHTML'](html, documentContext) || []; // Ensure we always return an array and never null
+        if ($['parseHTML']) {
+            return $['parseHTML'](html, documentContext) || []; // Ensure we always return an array and never null
         } else {
             // For jQuery < 1.8.0, we fall back on the undocumented internal "clean" function.
-            var elems = jQueryInstance['clean']([html], documentContext);
+            var elems = $['clean']([html], documentContext);
 
             // As of jQuery 1.7.1, jQuery parses the HTML by appending it to some dummy parent nodes held in an in-memory document fragment.
             // Unfortunately, it never clears the dummy parent nodes from the document fragment, so it leaks memory over time.
@@ -97,7 +98,7 @@ import ko from './namespace';
     }
 
     ko.utils.parseHtmlFragment = function(html, documentContext) {
-        return jQueryInstance ?
+        return $ ?
             jQueryHtmlParse(html, documentContext) :   // As below, benefit from jQuery's optimisations where possible
             simpleHtmlParse(html, documentContext);  // ... otherwise, this simple logic will do in most common cases.
     };
@@ -120,8 +121,8 @@ import ko from './namespace';
             // jQuery contains a lot of sophisticated code to parse arbitrary HTML fragments,
             // for example <tr> elements which are not normally allowed to exist on their own.
             // If you've referenced jQuery we'll use that rather than duplicating its code.
-            if (jQueryInstance) {
-                jQueryInstance(node)['html'](html);
+            if ($) {
+                $(node)['html'](html);
             } else {
                 // ... otherwise, use KO's own parsing logic.
                 var parsedNodes = ko.utils.parseHtmlFragment(html, node.ownerDocument);

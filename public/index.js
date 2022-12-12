@@ -1,0 +1,17 @@
+
+
+
+
+
+ko.applyBindings({
+    hello: "hello"
+});
+
+
+
+
+
+
+
+
+

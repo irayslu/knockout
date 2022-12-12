@@ -51,3 +51,9 @@ ko.bindingHandlers['event'] = {
         });
     }
 };
+
+
+export {
+    makeEventHandlerShortcut
+}
+

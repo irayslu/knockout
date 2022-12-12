@@ -1,4 +1,5 @@
 import ko from '../namespace';
+import { valuesArePrimitiveAndEqual } from './extenders';
 
 var observableLatestValue = ko.utils.createSymbolOrString('_latestValue');
 

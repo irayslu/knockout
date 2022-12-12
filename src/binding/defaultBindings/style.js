@@ -1,4 +1,6 @@
 import ko from '../../namespace';
+import $ from 'jquery';
+
 ko.bindingHandlers['style'] = {
     'update': function (element, valueAccessor) {
         var value = ko.utils.unwrapObservable(valueAccessor() || {});
@@ -10,8 +12,8 @@ ko.bindingHandlers['style'] = {
                 styleValue = "";
             }
 
-            if (jQueryInstance) {
-                jQueryInstance(element)['css'](styleName, styleValue);
+            if ($) {
+                $(element)['css'](styleName, styleValue);
             } else if (/^--/.test(styleName)) {
                 // Is styleName a custom CSS property?
                 element.style.setProperty(styleName, styleValue);

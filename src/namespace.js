@@ -2,4 +2,6 @@
 // In the future, the following "ko" variable may be made distinct from "koExports" so that private objects are not externally reachable.
 var ko = typeof koExports !== 'undefined' ? koExports : {};
 
+ko.DEBUG = false;
+
 export default ko;

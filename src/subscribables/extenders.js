@@ -113,4 +113,9 @@ function applyExtenders(requestedExtenders) {
     return target;
 }
 
+export {
+    applyExtenders,
+    valuesArePrimitiveAndEqual
+}
+
 ko.exportSymbol('extenders', ko.extenders);
